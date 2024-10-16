@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { fetchUsers } from './store/reducers/ActionCreators';
+import PostContainer from './components/PostContainer';
 
 function App() {
   const dispatch = useAppDispatch();
@@ -20,6 +21,7 @@ function App() {
           <li key={user.id}>{user.name}</li>
         ))}
       </ul>
+      <PostContainer />
     </div>
   );
 }
